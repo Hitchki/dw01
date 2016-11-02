@@ -6,6 +6,7 @@ import { AppComponent }  from './app.component';
 import { DwaComponent }     from './dwa/dwa-component';
 import { DwoComponent }     from './dwo/dwo-component';
 import { SimulationsComponent }     from './simulations/simulations-component';
+import { DwaService } from './dwa/dwa.service';
 
 @NgModule({
   imports:      [
@@ -19,8 +20,8 @@ import { SimulationsComponent }     from './simulations/simulations-component';
         path: 'dwa',
         component: DwaComponent
       },{
-        path: 'dwa',
-        component: DwaComponent
+        path: 'dwo',
+        component: DwoComponent
       },{
         path: 'simulations',
         component: SimulationsComponent
@@ -28,6 +29,7 @@ import { SimulationsComponent }     from './simulations/simulations-component';
     ])
   ],
   declarations: [ AppComponent, DwaComponent, DwoComponent, SimulationsComponent ],
-  bootstrap:    [ AppComponent]
+  providers: [ DwaService ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
