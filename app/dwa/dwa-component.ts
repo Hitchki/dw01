@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DwaService } from './dwa.service';
 
 @Component({
   moduleId: module.id,
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dwa.component.html'
 })
 export class DwaComponent implements OnInit {
-  constructor(){ }
+  constructor(
+    private dwaService: DwaService
+  ){ }
 
-  ngOnInit() {
+  ngOnInit() { }
 
+  getData() {
+    
   }
 }
