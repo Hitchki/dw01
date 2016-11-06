@@ -6,11 +6,13 @@ import { AppComponent }  from './app.component';
 import { DwaComponent }     from './dwa/dwa-component';
 import { DwoComponent }     from './dwo/dwo-component';
 import { SimulationsComponent }     from './simulations/simulations-component';
-import { DwaService } from './dwa/dwa.service';
+//import { DwaService } from './dwa/dwa.service';
+import { HttpModule }    from '@angular/http';
 
 @NgModule({
   imports:      [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -29,7 +31,7 @@ import { DwaService } from './dwa/dwa.service';
     ])
   ],
   declarations: [ AppComponent, DwaComponent, DwoComponent, SimulationsComponent ],
-  providers: [ DwaService ],
+  providers: [ HttpModule ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
